@@ -1,0 +1,29 @@
+.MODEL SMALL
+.STACK 100H
+
+.CODE
+MAIN PROC
+
+    ; Read a character
+    MOV AH, 01H
+    INT 21H
+
+    CMP AL, 'Y'
+    JE PRINT1
+
+    MOV DL, '0'
+    MOV AH, 02H
+    INT 21H
+    JMP EXIT
+
+PRINT1:
+    MOV DL, '1'
+    MOV AH, 02H
+    INT 21H
+
+EXIT:
+    MOV AH, 4CH
+    INT 21H
+
+MAIN ENDP
+END MAIN
