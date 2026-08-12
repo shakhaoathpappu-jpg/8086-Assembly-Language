@@ -1,11 +1,11 @@
 # 8086 Assembly Language Programs
 
-This repository contains solutions to four fundamental 8086 Assembly Language problems. Due to browser-based emulator limitations, the original MASM/TASM source codes were adapted to run seamlessly on the [vgath-8086 Online Emulator](https://vgath-8086.github.io/ide/).
+This repository contains solutions to four fundamental 8086 Assembly Language problems. Due to browser-based emulator limitations, the original MASM/TASM source codes were adapted to run seamlessly on the https://vgath-8086.github.io/ide .
 
 ---
 
 ## 📌 Environment & Emulator Specifications
-* **Target Emulator:** [vgath-8086 Online IDE](https://vgath-8086.github.io/ide/)
+* **Target Emulator:** https://vgath-8086.github.io/ide 
 * **Format:** `.COM` executable style starting at offset `100h` (`ORG 100h`).
 * **Execution Termination:** Replaced DOS `INT 21H / AH=4CH` interrupts with the `HLT` instruction to prevent infinite execution loops in the web environment.
 
@@ -40,7 +40,7 @@ This repository contains solutions to four fundamental 8086 Assembly Language pr
 ---
 
 ## 🚀 How to Run
-1. Open the [vgath-8086 Online IDE](https://vgath-8086.github.io/ide/).
+1. Open the https://vgath-8086.github.io/ide .
 2. Copy and paste the adapted `.asm` code into the editor.
 3. Click **Compile**.
 4. Click **Run** or use step-by-step execution to observe register state changes.
