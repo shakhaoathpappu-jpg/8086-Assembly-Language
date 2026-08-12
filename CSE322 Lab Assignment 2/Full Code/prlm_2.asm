@@ -1,0 +1,246 @@
+.MODEL SMALL
+.STACK 100H
+
+.DATA
+    PROMPT DB 'Press a key: $'
+    MSG_UPPER DB 0DH, 0AH, 'Uppercase letter$'
+    MSG_LOWER DB 0DH, 0AH, 'Lowercase letter$'
+    MSG_NOT DB 0DH, 0AH, 'Not a letter$'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    LEA DX, PROMPT
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 1
+    INT 21H
+
+    CMP AL, 'A'
+    JB NOT_LETTER
+    CMP AL, 'Z'
+    JBE IS_UPPER
+
+    CMP AL, 'a'
+    JB NOT_LETTER
+    CMP AL, 'z'
+    JBE IS_LOWER
+
+NOT_LETTER:
+    LEA DX, MSG_NOT
+    JMP DISPLAY
+
+IS_UPPER:
+    LEA DX, MSG_UPPER
+    JMP DISPLAY
+
+IS_LOWER:
+    LEA DX, MSG_LOWER
+
+DISPLAY:
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN.MODEL SMALL
+.STACK 100H
+
+.DATA
+    PROMPT DB 'Press a key: $'
+    MSG_UPPER DB 0DH, 0AH, 'Uppercase letter$'
+    MSG_LOWER DB 0DH, 0AH, 'Lowercase letter$'
+    MSG_NOT DB 0DH, 0AH, 'Not a letter$'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    LEA DX, PROMPT
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 1
+    INT 21H
+
+    CMP AL, 'A'
+    JB NOT_LETTER
+    CMP AL, 'Z'
+    JBE IS_UPPER
+
+    CMP AL, 'a'
+    JB NOT_LETTER
+    CMP AL, 'z'
+    JBE IS_LOWER
+
+NOT_LETTER:
+    LEA DX, MSG_NOT
+    JMP DISPLAY
+
+IS_UPPER:
+    LEA DX, MSG_UPPER
+    JMP DISPLAY
+
+IS_LOWER:
+    LEA DX, MSG_LOWER
+
+DISPLAY:
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN.MODEL SMALL
+.STACK 100H
+
+.DATA
+    PROMPT DB 'Press a key: $'
+    MSG_UPPER DB 0DH, 0AH, 'Uppercase letter$'
+    MSG_LOWER DB 0DH, 0AH, 'Lowercase letter$'
+    MSG_NOT DB 0DH, 0AH, 'Not a letter$'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    LEA DX, PROMPT
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 1
+    INT 21H
+
+    CMP AL, 'A'
+    JB NOT_LETTER
+    CMP AL, 'Z'
+    JBE IS_UPPER
+
+    CMP AL, 'a'
+    JB NOT_LETTER
+    CMP AL, 'z'
+    JBE IS_LOWER
+
+NOT_LETTER:
+    LEA DX, MSG_NOT
+    JMP DISPLAY
+
+IS_UPPER:
+    LEA DX, MSG_UPPER
+    JMP DISPLAY
+
+IS_LOWER:
+    LEA DX, MSG_LOWER
+
+DISPLAY:
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN.MODEL SMALL
+.STACK 100H
+
+.DATA
+    PROMPT DB 'Press a key: $'
+    MSG_UPPER DB 0DH, 0AH, 'Uppercase letter$'
+    MSG_LOWER DB 0DH, 0AH, 'Lowercase letter$'
+    MSG_NOT DB 0DH, 0AH, 'Not a letter$'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    LEA DX, PROMPT
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 1
+    INT 21H
+
+    CMP AL, 'A'
+    JB NOT_LETTER
+    CMP AL, 'Z'
+    JBE IS_UPPER
+
+    CMP AL, 'a'
+    JB NOT_LETTER
+    CMP AL, 'z'
+    JBE IS_LOWER
+
+NOT_LETTER:
+    LEA DX, MSG_NOT
+    JMP DISPLAY
+
+IS_UPPER:
+    LEA DX, MSG_UPPER
+    JMP DISPLAY
+
+IS_LOWER:
+    LEA DX, MSG_LOWER
+
+DISPLAY:
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN.MODEL SMALL
+.STACK 100H
+
+.DATA
+    PROMPT DB 'Press a key: $'
+    MSG_UPPER DB 0DH, 0AH, 'Uppercase letter$'
+    MSG_LOWER DB 0DH, 0AH, 'Lowercase letter$'
+    MSG_NOT DB 0DH, 0AH, 'Not a letter$'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    LEA DX, PROMPT
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 1
+    INT 21H
+
+    CMP AL, 'A'
+    JB NOT_LETTER
+    CMP AL, 'Z'
+    JBE IS_UPPER
+
+    CMP AL, 'a'
+    JB NOT_LETTER
+    CMP AL, 'z'
+    JBE IS_LOWER
+
+NOT_LETTER:
+    LEA DX, MSG_NOT
+    JMP DISPLAY
+
+IS_UPPER:
+    LEA DX, MSG_UPPER
+    JMP DISPLAY
+
+IS_LOWER:
+    LEA DX, MSG_LOWER
+
+DISPLAY:
+    MOV AH, 9
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN

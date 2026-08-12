@@ -1,0 +1,38 @@
+.MODEL SMALL
+.STACK 100H
+
+.DATA
+    N1 DB 50
+    N2 DB 100
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    XOR AX, AX
+
+    MOV BL, N1
+    MOV BH, 0
+
+    MOV CL, N2
+    MOV CH, 0
+
+SUM_LOOP:
+    CMP BX, CX
+    JA END_LOOP
+
+    TEST BL, 1
+    JZ NEXT_NUM
+
+    ADD AX, BX
+
+NEXT_NUM:
+    INC BX
+    JMP SUM_LOOP
+
+END_LOOP:
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN

@@ -1,0 +1,41 @@
+.MODEL SMALL
+.STACK 100H
+
+.DATA
+    A DB 4
+    B DB 9
+    C DB 7
+    MSG DB 'Largest = $'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    MOV AL, A
+
+    CMP AL, B
+    JGE CHECK_C
+    MOV AL, B
+
+CHECK_C:
+    CMP AL, C
+    JGE PRINT_RESULT
+    MOV AL, C
+
+PRINT_RESULT:
+    MOV BL, AL
+
+    LEA DX, MSG
+    MOV AH, 9
+    INT 21H
+
+    MOV DL, BL
+    ADD DL, '0'
+    MOV AH, 2
+    INT 21H
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN
