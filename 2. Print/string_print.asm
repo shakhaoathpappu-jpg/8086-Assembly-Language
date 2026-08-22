@@ -2,7 +2,7 @@
 .STACK 100H
 
 .DATA
-    MSG DB 'Hello World!$'
+    MSG DB 'Hello World! Bangladesh$'
 
 .CODE
 MAIN PROC
