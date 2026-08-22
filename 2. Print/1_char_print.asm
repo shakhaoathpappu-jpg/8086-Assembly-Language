@@ -10,7 +10,7 @@ MAIN PROC
     MOV DS, AX
 
     MOV AH, 02H
-    MOV DL, 'A'
+    MOV DL, 'a'
     INT 21H
 
     MOV AH, 4CH
